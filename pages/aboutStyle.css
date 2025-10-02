@@ -1,0 +1,52 @@
+.page-center {
+  min-height: calc(100vh - 85px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  height: auto;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .about_box {
+  width: 100%;
+  display: flex;
+  padding: 60px 60px;
+}
+
+.about_box .heading_about {
+  font-size: 3rem;
+  color: #ffd966;
+  text-align: left;
+  margin-bottom: 50px;
+  display: flex;
+  margin-left: 20px;
+}
+
+.subheading_about {
+  color: #f8d9ae;
+  font-size: 1.5rem;
+  margin: 20px;
+}
+
+.img_md {
+  margin-left: 20px;
+}
+
+.goddess_img {
+  width: min(45vw, 560px);
+  height: auto;
+}

@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(180deg, #231023 0%, #2b1427 40%, #451b12 100%),
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(255, 215, 102, 0.06),
+      transparent 15%
+    );
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 6, 8, 0.36);
+  pointer-events: none;
+  z-index: 0;
+}
+.navbar,
+.mainPage,
+.highlights,
+.card {
+  position: relative;
+  z-index: 1;
+}
+
+nav a {
+  font-size: 1.4rem;
+  margin-left: 3rem;
+  font-weight: 400;
+  transition: 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
+}
+
+.navbar {
+  height: 85px;
+  position: sticky;
+  padding: 1px 1%;
+  align-items: center;
+  justify-content: space-evenly;
+  background: transparent;
+  backdrop-filter: blur(80px);
+  color: white;
+  display: flex;
+}
+
+.nav-logo {
+  height: 75px;
+  width: 100px;
+  position: fixed;
+  left: 5%;
+  padding-top: 5px;
+}
+
+.navigation {
+  position: fixed;
+  right: 5%;
+}
+
+.logo {
+  width: 100px;
+  height: 75px;
+  background-image: url("images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mainPage {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  justify-content: space-evenly;
+  text-align: center;
+  display: flex;
+  position: relative;
+}
+
+.container {
+  height: 80%;
+  width: 80%;
+  margin: 7% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1_1 {
+  font-size: 10vh;
+  color: #ffd966;
+}
+
+.h1_2 {
+  font-size: 13vh;
+  color: #ffd966;
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.h3_1 {
+  font-size: 2rem;
+  font-weight: 350;
+  color: #f8d9ae;
+  padding: 20px;
+}
+
+sup {
+  font-size: 20px;
+  position: relative;
+  bottom: 15px;
+}
+
+.date {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #f8d9ae;
+}
+
+.btn-mainPage {
+  position: relative;
+  border: none;
+  z-index: 0;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  cursor: pointer;
+  margin-top: 35px;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #b74b4b, #f18b65);
+  font-size: 1.2rem;
+}
+
+.btn-mainPage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #f18b65, #b74b4b);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.btn-mainPage:hover::before {
+  opacity: 1;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 100px;
+  margin: 70px auto 85px;
+  max-width: 1300px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  aspect-ratio: 1 / 1;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(44, 26, 36, 0.92);
+  color: #f8f1e7;
+  border: 2.5px solid rgba(255, 183, 77, 0.45);
+  border-radius: 12px;
+  padding: 28px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 14px rgba(255, 183, 77, 0.16);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+  color: #ff9933;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  background: transparent;
+  letter-spacing: 2px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #fff4c2;
+  background: transparent;
+  max-width: 84%;
+  margin: 20px auto;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.48), 0 0 44px rgba(255, 183, 77, 0.32),
+    0 0 18px rgba(255, 217, 102, 0.18);
+}
+
+@media (max-width: 1000px) {
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 120px;
+    max-width: 900px;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .highlights {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 80px;
+    padding: 12px;
+  }
+
+  .card {
+    min-height: 200px;
+    padding: 18px;
+  }
+}
